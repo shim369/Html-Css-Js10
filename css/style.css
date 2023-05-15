@@ -93,7 +93,12 @@ nav a {
     background: url(/image/main-v.jpg);
     background-position: center;
     font-family: 'Bruno Ace', sans-serif;
-    /* position: absolute; */
+}
+
+@media screen and (max-width: 800px) {
+    .main-read {
+        font-size: 4em;
+    }
 }
 
 @media screen and (max-width: 480px) {
