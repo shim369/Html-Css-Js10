@@ -6,12 +6,18 @@
     box-sizing: border-box;
 }
 
+:root {
+    /* --main-color: rgba(212, 181, 4, 0.86); */
+    --main-color: rgb(122 153 158);
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Ysabeau', sans-serif;
+    background: var(--main-color);
 }
 
 .wrapper {
@@ -22,16 +28,22 @@ section {
     width: 100%;
     min-height: 100vh;
     padding: 60px 0;
+    background: rgb(226 232 234);
 }
 
 section:nth-child(2n){
-    background: #e5eaee;
+    /* background: #e5eaee; */
+    background: var(--main-color);
+}
+section:nth-child(2n) h1{
+    color: rgb(226 232 234);
 }
 
 section h1 {
     text-align: center;
     font-size: 3em;
-    color: rgb(133, 131, 131);
+    /* color: rgb(133, 131, 131); */
+    color: var(--main-color);
     font-weight: bold;
     font-family: 'Bruno Ace', sans-serif;
 }
@@ -64,7 +76,7 @@ nav {
 nav a {
     text-decoration: none;
     margin: 0 8px;
-    color: rgb(133, 131, 131);
+    color: var(--main-color);
     font-family: 'Ysabeau', sans-serif;
     font-family: 'Bruno Ace', sans-serif;
 }
@@ -72,7 +84,8 @@ nav a {
 .alogo {
     font-size: 2em;
     text-decoration: none;
-    /* color: rgb(21 119 167 / 86%); */
+    color: var(--main-color);
+    text-align: center;
     font-weight: bold;
     font-family: 'Bruno Ace', sans-serif;
 }
@@ -83,10 +96,11 @@ nav a {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding-left: 5%;
+    padding: 0 5%;
     text-transform: uppercase;
-    font-size: 5em;
-    color: rgb(21 119 167 / 86%);
+    font-size: 4.8em;
+    color: var(--main-color);
+    /* color: rgb(21 119 167 / 86%); */
     font-weight: bold;
     z-index: 1;
     background: url(/image/main-v.jpg);
@@ -96,7 +110,7 @@ nav a {
 
 @media screen and (max-width: 800px) {
     .main-read {
-        font-size: 4em;
+        font-size: 3.5em;
     }
 }
 
@@ -116,10 +130,12 @@ footer {
     display: flex;
     justify-content: center;
     padding: 8px 0;
+    background: var(--main-color);
 
 }
 
 small {
+    color: #fff;
     font-size: 1em;
     font-family: 'Ysabeau', sans-serif;
 }
