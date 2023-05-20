@@ -61,7 +61,6 @@ header {
     justify-content: center;
     flex-direction: column;
     padding: 20px;
-    z-index: 2;
     background: #fff;
 }
 
@@ -81,21 +80,27 @@ nav a {
 }
 
 nav a:hover {
-    opacity: .6;
+    opacity: .8;
 }
 
 nav a:last-child {
     color: #fff;
     background: rgb(217 14 14);
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0;
     text-align: center;
     border-radius: 100%;
+    /* box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2); */
 }
+
+/* nav a:last-child:hover {
+    box-shadow: none;
+    opacity: 1;
+} */
 
 .alogo {
     font-size: 2em;
