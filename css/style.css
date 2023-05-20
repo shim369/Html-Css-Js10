@@ -19,7 +19,7 @@ html {
 
 body {
     font-family: 'Ysabeau', sans-serif;
-    background: rgb(226 232 234);
+    background: var(--main-color);
 }
 
 .wrapper {
@@ -30,20 +30,19 @@ section {
     width: 100%;
     min-height: 100vh;
     padding: 60px 0;
+    background: rgb(226 232 234);
 }
 
-section:nth-child(2n+1){
-    /* background: #e5eaee; */
+section:nth-child(2n){
     background: var(--main-color);
 }
-section:nth-child(2n+1) h1{
+section:nth-child(2n) h1{
     color: rgb(226 232 234);
 }
 
 section h1 {
     text-align: center;
     font-size: 3em;
-    /* color: rgb(133, 131, 131); */
     color: var(--main-color);
     font-weight: bold;
     font-family: 'Bruno Ace', sans-serif;
@@ -70,7 +69,6 @@ nav {
     width: 100%;
     display: flex;
     justify-content: space-around;
-    /* margin-bottom: 20px; */
     align-items: center;
 }
 
@@ -78,18 +76,25 @@ nav a {
     text-decoration: none;
     margin: 0 8px;
     color: var(--main-color);
-    /* font-family: 'Ysabeau', sans-serif; */
     font-family: 'Bruno Ace', sans-serif;
     padding: 10px 20px;
 }
 
 nav a:hover {
-    opacity: .8;
+    opacity: .6;
 }
 
 nav a:last-child {
     color: #fff;
     background: rgb(217 14 14);
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    text-align: center;
+    border-radius: 100%;
 }
 
 .alogo {
@@ -106,18 +111,16 @@ nav a:last-child {
     height: 85vh;
     display: flex;
     justify-content: center;
-    /* align-items: center; */
     flex-direction: column;
     align-items: flex-start;
     padding: 0 5%;
-    /* font-size: 4.8em; */
-    /* color: rgb(21 119 167 / 86%); */
     font-weight: bold;
     z-index: 1;
     background: url(/image/main-v.jpg);
     background-position: center;
     font-family: 'Bruno Ace', sans-serif;
-    /* filter: grayscale(90%); */
+    position: relative;
+    overflow-y: hidden;
 }
 
 @media screen and (max-width: 800px) {
@@ -136,29 +139,23 @@ nav a:last-child {
 }
 
 .main-read {
-    /* -webkit-text-stroke: .5px var(--accent-color); */
     color: var(--main-color);
     font-size: 4.8em;
-    margin-right: .5em;
+    margin-left: .5em;
     text-transform: uppercase;
     text-shadow: 1px 1px 2px white;
 }
 
 .sub-read {
-    font-size: 2.5em;
-    color: #fff;
-    /* text-shadow: 1px 1px 2px var(--main-color);*/
+    writing-mode: vertical-lr;
     background: var(--main-color);
     padding: 10px; 
-}
-
-.main-1 {
-    display: flex;
-    align-items: center;
-}
-
-.main-2 {
-    margin-bottom: 15px;
+    font-size: 2.5em;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    text-align: center;
 }
 
 main {
@@ -170,11 +167,12 @@ footer {
     display: flex;
     justify-content: center;
     padding: 8px 0;
-
+    background: var(--main-color);
 }
 
 small {
     color: var(--main-color);
     font-size: 1em;
     font-family: 'Ysabeau', sans-serif;
+    color: #fff;
 }
