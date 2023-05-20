@@ -19,6 +19,7 @@ html {
 body {
     background: var(--main-color);
     font-family: 'Bruno Ace', sans-serif;
+    word-break: break-all;
 }
 
 .wrapper {
@@ -28,7 +29,7 @@ body {
 section {
     width: 100%;
     min-height: 100vh;
-    padding: 60px 0;
+    padding: 60px 0 120px;
     background: rgb(226 232 234);
 }
 
@@ -202,9 +203,9 @@ main {
     display: flex;
     justify-content: space-around;
     position: relative;
-    &::before {
+    &::after {
         position: absolute;
-        top: -50px;
+        bottom: -150px;
         left: 1.5%;
         display: block;
         content: "What's New";
@@ -233,11 +234,13 @@ main {
         }
         .date {
             display: inline-block;
+            color: var(--main-color);
         }
         h2 {
             margin-top: 10px;
             color: var(--main-color);
             font-weight: normal;
+            font-size: 1.3em;
         }
     }
 }
