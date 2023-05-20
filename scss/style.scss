@@ -8,9 +8,8 @@
 }
 
 :root {
-    /* --main-color: rgba(212, 181, 4, 0.86); */
     --main-color: rgb(107 130 138);
-    --accent-color: rgb(107 130 138);
+    --accent-color: #ee709f;
 }
 
 html {
@@ -81,7 +80,7 @@ nav {
         }
         &:last-child {
             color: #fff;
-            background: #ee709f;
+            background: var(--accent-color);
             width: 90px;
             height: 90px;
             display: flex;
@@ -191,24 +190,13 @@ main {
             line-height: 1.6em;
         }
         a {
-            background: #ee709f;
+            background: var(--accent-color);
             color: #fff;
             padding: 4px 8px;
             text-decoration: none;
         }
     }
 }
-
-// .blog-title {
-//     padding: 10px 1.5%;
-//     p {
-//         font-size: 5em;
-//         color: var(--main-color);
-//         opacity: .5;
-//         text-align: center;
-//         margin-bottom: 30px;
-//     }
-// }
 
 .blog-content {
     display: flex;
@@ -236,7 +224,7 @@ main {
             width: 100%;
         }
         .category {
-            background: #ee709f;
+            background: var(--accent-color);
             color: #fff;
             display: inline-block;
             padding: 4px 8px;
