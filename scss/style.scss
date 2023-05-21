@@ -9,7 +9,7 @@
 
 :root {
     --main-color: rgb(74, 99, 107);
-    --accent-color: #ee709f;
+    --accent-color: #eed770;
 }
 
 html {
@@ -71,6 +71,7 @@ nav {
     justify-content: space-around;
     align-items: center;
      a {
+        // border-left: solid 1px var(--main-color);
         text-decoration: none;
         margin: 0 8px;
         color: var(--main-color);
@@ -373,25 +374,27 @@ main {
             width: 100%;
         }
         .blog-text {
-            padding: 10px;
+            padding: 15px;
         }
         .category {
             background: var(--main-color);
             color: #fff;
             display: inline-block;
             padding: 4px 8px;
-            margin-top: 10px;
+            // margin-top: 10px;
             margin-right: 10px;
+            font-size: .8em;
         }
         .date {
             display: inline-block;
             color: var(--main-color);
+            font-size: .8em;
         }
         h2 {
             margin-top: 10px;
             color: var(--main-color);
             font-weight: normal;
-            font-size: 1.3em;
+            font-size: 1em;
         }
     }
 }
@@ -436,7 +439,7 @@ main {
             font-weight: normal;
         }
         button {
-            color: #fff;
+            color: var(--main-color);
             background: var(--accent-color);
             border: solid 1px var(--accent-color);
             padding: 10px 20px;
@@ -446,7 +449,7 @@ main {
             cursor: pointer;
             &:hover {
                 border: solid 1px var(--accent-color);
-                color: #fff;
+                color: var(--accent-color);
                 background: transparent;
             }
         }
