@@ -28,25 +28,22 @@ body {
 
 section {
     width: 100%;
-    // min-height: 100vh;
     padding: 60px 0;
     background: rgb(226 232 234);
-}
-
-section:nth-child(2n){
-    background: var(--main-color);
-}
-section:nth-child(2n) h1{
-    color: rgb(226 232 234);
-}
-
-section h1 {
-    text-align: center;
-    font-size: 3em;
-    color: var(--main-color);
-    font-weight: bold;
-    font-family: 'Bruno Ace', sans-serif;
-    margin-bottom: 40px;
+    &:nth-child(2n){
+        background: var(--main-color);
+        h1 {
+            color: rgb(226 232 234);
+        }
+    }
+    h1 {
+        text-align: center;
+        font-size: 3em;
+        color: var(--main-color);
+        font-weight: bold;
+        font-family: 'Bruno Ace', sans-serif;
+        margin-bottom: 40px;
+    }
 }
 
 header {
@@ -225,6 +222,7 @@ header {
     text-shadow: 1px 1px 2px white;
     @media screen and (max-width: 800px) {
         font-size: 3.5em;
+        margin-left: 48px;
     }
     @media screen and (max-width: 480px) {
         font-size: 2.2em;
@@ -241,13 +239,56 @@ header {
     left: 0;
     height: 100%;
     text-align: center;
+    @media screen and (max-width: 480px) {
+        font-size: 1.2em;
+    }
 }
 
 .scrolldown {
-  position: absolute;
-  bottom: 10px;
-  right: 50%;
-  animation: mousemove 1.6s ease-in-out infinite;
+    position: absolute;
+    bottom: 10px;
+    right: 50%;
+    animation: mousemove 1.6s ease-in-out infinite;
+    span {
+        position: absolute;
+        left: -15px;
+        bottom: 45px;
+        color: var(--main-color);
+        font-size: 0.7rem;
+        letter-spacing: 0.05em;
+        width: 49px;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 10px;
+            left: 18px;
+            width: 1px;
+            height: 15px;
+            background: var(--main-color);
+            animation: mousepathmove 1.4s linear infinite;
+            opacity: 0;
+        }
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: -10px;
+        width: 25px;
+        height: 37px;
+        border-radius: 10px;
+        border: 1px solid var(--main-color);
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 26px;
+        left: 0;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        border:1px solid var(--main-color);
+    }
 }
 
 @keyframes mousemove {
@@ -262,65 +303,21 @@ header {
     }
 }
 
-.scrolldown span {
-  position: absolute;
-  left: -15px;
-  bottom: 45px;
-  color: var(--main-color);
-  font-size: 0.7rem;
-  letter-spacing: 0.05em;
-  width: 49px;
-}
-
-.scrolldown span::after {
-  content: "";
-  position: absolute;
-  top: 10px;
-  left: 18px;
-  width: 1px;
-  height: 15px;
-  background: var(--main-color);
-  animation: mousepathmove 1.4s linear infinite;
-  opacity: 0;
-}
-
 @keyframes mousepathmove {
-  0% {
-    height: 0;
-    top: 10px;
-    opacity: 0;
-  }
-  50% {
-    height: 15px;
-    opacity: 1;
-  }
-  100% {
-    height: 0;
-    top: 30px;
-    opacity: 0;
-  }
-}
-
-.scrolldown:before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: -10px;
-    width: 25px;
-    height: 37px;
-    border-radius: 10px;
-    border: 1px solid var(--main-color);
-}
-
-.scrolldown:after {
-    content: "";
-    position: absolute;
-    bottom: 26px;
-    left: 0;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    border:1px solid var(--main-color);
+    0% {
+        height: 0;
+        top: 10px;
+        opacity: 0;
+    }
+    50% {
+        height: 15px;
+        opacity: 1;
+    }
+    100% {
+        height: 0;
+        top: 30px;
+        opacity: 0;
+    }
 }
 
 main {
@@ -357,7 +354,7 @@ main {
         bottom: 20px;
         width: 40%;
         z-index: 2;
-        background: #fff;
+        background: #fffffff4;
         padding: 20px;
         color: var(--main-color);
         @media screen and (max-width: 800px) {
@@ -465,24 +462,44 @@ main {
         width: 30%;
         margin: 30px 1.5%;
         background: #fff;
+        box-shadow: 0px 11px 15px -4px #cfcece;
+        text-decoration: none;
+        transition: .3s;
         @media (max-width: 800px) {
             width: 47%;
         }
         @media (max-width: 480px) {
             width: 97%;
         }
-        img {
+        &:hover {
+            box-shadow: none;
+        }
+        .blog-img {
             width: 100%;
+            height: 200px;
+            overflow:hidden;
+            img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+                position: relative;
+                z-index: 0;
+                &:hover {
+                    transform: scale(1.1, 1.1);
+                    transition: .3s;
+                }
+            }
         }
         .blog-text {
             padding: 15px;
+            position: relative;
+            z-index: 1;
         }
         .category {
             background: var(--main-color);
             color: #fff;
             display: inline-block;
             padding: 4px 8px;
-            // margin-top: 10px;
             margin-right: 10px;
             font-size: .8em;
         }
@@ -519,7 +536,7 @@ main {
         align-items: center;
         input {
             color: #fff;
-            background: rgb(144 170 178);
+            background: #3f5156;
             font-size: 15px;
             transition: all .3s;
             padding: 13px;
@@ -527,10 +544,16 @@ main {
             border: none;
             margin-bottom: 30px;
             font-weight: normal;
+            &:focus {
+                outline: none;
+            }
+            &::placeholder {
+                color: #999;
+            }
         }
         textarea {
             color: #fff;
-            background: rgb(144 170 178);
+            background: #3f5156;
             font-size: 15px;
             transition: all .3s;
             padding: 13px;
@@ -538,6 +561,12 @@ main {
             border: none;
             min-height: 150px;
             font-weight: normal;
+            &:focus {
+                outline: none;
+            }
+            &::placeholder {
+                color: #999;
+            }
         }
         button {
             color: var(--main-color);
