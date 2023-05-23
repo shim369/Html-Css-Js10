@@ -141,6 +141,8 @@ header {
     width: 50px;
     height: 50px;
     display: none;
+    background: var(--accent-color);
+    padding: 10px;
     @media screen and (max-width: 800px) {
         display: block;
     }
@@ -169,8 +171,8 @@ header {
                 top: 18px;
                 left: 18px;
                 transform: translateY(6px) rotate(-45deg);
-                width: 40%;
-                background: #fff;
+                width: 33%;
+                background: var(--main-color);
             }
             &:nth-of-type(2) {
                 opacity: 0;
@@ -179,8 +181,8 @@ header {
                 top: 30px;
                 left: 18px;
                 transform: translateY(-6px) rotate(45deg);
-                width: 40%;
-                background: #fff;
+                width: 33%;
+                background: var(--main-color);
             }
         }
     }
@@ -193,6 +195,9 @@ header {
     text-align: center;
     font-weight: bold;
     font-family: 'Bruno Ace', sans-serif;
+    @media screen and (max-width: 480px) {
+        font-size: 1.5em;
+    }
 }
 
 .main-box {
