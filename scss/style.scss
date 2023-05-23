@@ -32,6 +32,7 @@ section {
     background: rgb(226 232 234);
     &:nth-child(2n){
         background: var(--main-color);
+        background-image: repeating-linear-gradient(to bottom, #3f5156, #3f5156 1px, transparent 0, transparent 64px), repeating-linear-gradient(to right,#3f5156, #3f5156 1px, transparent 0, transparent 64px);    
         h1 {
             color: rgb(226 232 234);
         }
@@ -596,7 +597,7 @@ footer {
     display: flex;
     justify-content: center;
     padding: 8px 0;
-    background: var(--main-color);
+    background: #3f5156;
     small {
         color: var(--main-color);
         font-size: 1em;
