@@ -24,6 +24,11 @@ TweenMax.from('.moon-text', .5, {
     display: "none",
 })
 
+TweenMax.from('.open', .5, {
+    delay: 3.3,
+    opacity: 0,
+})
+
 TweenMax.from('.main-read', 1, {
     delay: 3.3,
     opacity: 0,
