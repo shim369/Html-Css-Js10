@@ -9,7 +9,7 @@ TweenMax.from('.moon', .3, {
     opacity: 1,
     top: "0%",
     left: "0%",
-    fontSize: "5em",
+    fontSize: "3em",
 })
 
 TweenMax.from('.moon-title', .5, {

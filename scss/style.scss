@@ -48,6 +48,9 @@ body {
         align-items: center;
         color: #fff;
         transition: .3s;
+        @media screen and (max-width: 480px) {
+            font-size: .8em;
+        }
         &:hover {
             opacity: .6 !important;
         }
@@ -283,9 +286,9 @@ header {
     background-position: center;
     position: relative;
     overflow-y: hidden;
-    @media screen and (max-width: 480px) {
-        height: 55vh;
-    }
+    // @media screen and (max-width: 480px) {
+    //     height: 55vh;
+    // }
 }
 
 .main-read {
@@ -296,6 +299,7 @@ header {
     text-shadow: 4px 8px 0px #fff;
     @media screen and (max-width: 800px) {
         font-size: 2.5em;
+        text-shadow: 2px 2px 0px #fff;
         margin-left: 48px;
     }
     @media screen and (max-width: 480px) {
@@ -388,6 +392,7 @@ main {
 
 .container {
     max-width: 1440px;
+    padding: 0 2%;
 }
 
 .flex-box {
@@ -395,7 +400,7 @@ main {
     justify-content: space-between;
     align-items: flex-end;
     position: relative;
-    padding: 30px;
+    // padding: 30px;
     @media screen and (max-width: 800px) {
         flex-direction: column;
     }
@@ -412,7 +417,7 @@ main {
     }
     .about-text {
         position: absolute;
-        right: 30px;
+        right: 0;
         bottom: 20px;
         width: 45%;
         z-index: 2;
@@ -448,22 +453,24 @@ main {
     flex-direction: row;
     align-items: flex-start;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     li {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: flex-start;
         margin-bottom: 40px;
-        width: 46%;
-        padding: 10px;
+        width: 49%;
+        // padding: 10px;
         @media (max-width: 800px) {
             width: 100%;
-            margin-bottom: 20px;
         }
         .skills-img {
             width: 100px;
             height: auto;
             margin-right: 20px;
+            @media (max-width: 800px) {
+                margin-right: 2%;
+            }
             img {
                 width: 100%;
                 height: auto;
@@ -474,9 +481,14 @@ main {
         .skills-text {
             width: 70%;
             color: #fff;
+            flex: 1;
+            // padding: 0 2% 0 0;
             h2 {
                 margin-bottom: 10px;
                 line-height: 1;
+                @media (max-width: 480px) {
+                    font-size: 1.3em;
+                }
             }
             p {
                 text-align: left;
@@ -495,6 +507,7 @@ main {
     display: flex;
     position: relative;
     flex-wrap: wrap;
+    justify-content: space-between;
     @media (max-width: 480px) {
         flex-direction: column;
     }
@@ -521,8 +534,8 @@ main {
     .blog-item {
         position: relative;
         z-index: 1;
-        width: 30%;
-        margin: 30px 1.5%;
+        width: 32%;
+        margin: 30px 0;
         background: #fff;
         box-shadow: 0px 11px 15px -4px #cfcece;
         text-decoration: none;
@@ -531,7 +544,7 @@ main {
             width: 47%;
         }
         @media (max-width: 480px) {
-            width: 97%;
+            width: 100%;
         }
         &:hover {
             box-shadow: none;
@@ -583,7 +596,7 @@ main {
     width: 100%;
     max-width: 500px;
     margin: 40px auto;
-    padding: 20px;
+    // padding: 20px;
     @media (max-width: 800px) {
         max-width: 100%;
     }
