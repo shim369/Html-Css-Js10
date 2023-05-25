@@ -35,7 +35,7 @@ body {
     justify-content: center;
     align-items: center;
     top: 17vh;
-    right: 5vw;
+    right: 3%;
     text-decoration: none;
     .moon-title {
         opacity: 0;
@@ -286,9 +286,6 @@ header {
     background-position: center;
     position: relative;
     overflow-y: hidden;
-    // @media screen and (max-width: 480px) {
-    //     height: 55vh;
-    // }
 }
 
 .main-read {
@@ -400,15 +397,14 @@ main {
     justify-content: space-between;
     align-items: flex-end;
     position: relative;
-    // padding: 30px;
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 1000px) {
         flex-direction: column;
     }
     .about-image {
         position: relative;
         z-index: 1;
         width: 60%;
-        @media screen and (max-width: 800px) {
+        @media screen and (max-width: 1000px) {
             width: 100%;
         }
         img {
@@ -424,7 +420,7 @@ main {
         background: #fffffff4;
         padding: 20px;
         color: var(--main-color);
-        @media screen and (max-width: 800px) {
+        @media screen and (max-width: 1000px) {
             position: relative;
             width: 100%;
             right: 0;
@@ -460,7 +456,6 @@ main {
         align-items: flex-start;
         margin-bottom: 40px;
         width: 49%;
-        // padding: 10px;
         @media (max-width: 800px) {
             width: 100%;
         }
@@ -482,7 +477,6 @@ main {
             width: 70%;
             color: #fff;
             flex: 1;
-            // padding: 0 2% 0 0;
             h2 {
                 margin-bottom: 10px;
                 line-height: 1;
@@ -596,7 +590,6 @@ main {
     width: 100%;
     max-width: 500px;
     margin: 40px auto;
-    // padding: 20px;
     @media (max-width: 800px) {
         max-width: 100%;
     }
