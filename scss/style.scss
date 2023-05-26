@@ -460,6 +460,12 @@ main {
         align-items: flex-start;
         margin-bottom: 40px;
         width: 49%;
+        &:hover {
+            img {
+                border-radius: 100%;
+                transition: .3s;
+            }
+        }
         @media (max-width: 800px) {
             width: 100%;
         }
