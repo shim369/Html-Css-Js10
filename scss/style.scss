@@ -294,10 +294,10 @@ header {
     font-size: 4em;
     margin-left: 68px;
     text-transform: uppercase;
-    text-shadow: 4px 8px 0px #fff;
+    text-shadow: 4px 8px 0px #e7ecee;
     @media screen and (max-width: 800px) {
         font-size: 2.5em;
-        text-shadow: 2px 2px 0px #fff;
+        text-shadow: 2px 2px 0px #e7ecee;
         margin-left: 48px;
     }
     @media screen and (max-width: 480px) {
@@ -310,7 +310,7 @@ header {
     background: var(--main-color);
     padding: 10px; 
     font-size: 2.5em;
-    color: #fff;
+    color: #e7ecee;
     position: absolute;
     left: 0;
     height: 100%;
