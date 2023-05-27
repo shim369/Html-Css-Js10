@@ -28,6 +28,7 @@ TweenMax.from('.moon-title', .3, {
 TweenMax.from('.moon-text', .3, {
     delay: 1.9,
     opacity: 0,
+    x: 20,
     display: "none",
     ease: Expo.easeInOut,
 })
