@@ -1,5 +1,5 @@
 TweenMax.from('.moon', .3, {
-    delay: 2,
+    delay: 1.6,
     width: "100%",
     height: "100%",
     background: "#eed770",
@@ -10,34 +10,42 @@ TweenMax.from('.moon', .3, {
     top: "0%",
     left: "0%",
     fontSize: "3em",
+    ease: Expo.easeInOut,
+})
+
+TweenMax.from('nav', .3, {
+    delay: 1.9,
+    opacity: 0,
+    y: 20,
 })
 
 TweenMax.from('.moon-title', .3, {
-    delay: 2.2,
+    delay: 1.6,
     opacity: 1,
     display: "block",
 })
 
-TweenMax.from('.moon-text', .5, {
-    delay: 2.8,
+TweenMax.from('.moon-text', .3, {
+    delay: 1.9,
     opacity: 0,
     display: "none",
+    ease: Expo.easeInOut,
 })
 
 TweenMax.from('.open', .5, {
-    delay: 3.3,
+    delay: 2.2,
     opacity: 0,
 })
 
-TweenMax.from('.sub-read', 1, {
-    delay: 3.3,
+TweenMax.from('.sub-read', .5, {
+    delay: 2.2,
     opacity: 0,
     y: -20,
     ease: Expo.easeInOut,
 })
 
-TweenMax.from('.main-read', 1, {
-    delay: 3.5,
+TweenMax.from('.main-read', .5, {
+    delay: 2.7,
     opacity: 0,
     x: -20,
     ease: Expo.easeInOut,

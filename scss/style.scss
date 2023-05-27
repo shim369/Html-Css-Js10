@@ -267,6 +267,7 @@ header {
     color: var(--main-color);
     text-align: center;
     font-weight: bold;
+    opacity: 1;
     font-family: 'Bruno Ace', sans-serif;
     @media screen and (max-width: 480px) {
         font-size: 1.5em;
@@ -327,6 +328,7 @@ header {
     position: absolute;
     bottom: 10px;
     left: 50%;
+    opacity: 1;
     span {
         position: absolute;
         left: 10px;
