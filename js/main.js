@@ -1,3 +1,14 @@
+TweenMax.from('.cover', 1.5, {
+    width: "100%",
+    height: "100%",
+    background: "#eed770",
+    display: "flex",
+    zIndex: 1000,
+    opacity: 1,
+    top: "0%",
+    left: "0%",
+})
+
 TweenMax.from('.moon', .3, {
     delay: 1.6,
     width: "100%",
