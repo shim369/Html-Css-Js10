@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 TweenMax.from('.cover', 1.5, {
     width: "100%",
     height: "100%",
@@ -58,29 +59,11 @@ TweenMax.from('.sub-read', .5, {
 
 TweenMax.from('.main-read', .5, {
     delay: 2.7,
+=======
+TweenMax.from('.logo', 1, {
+    delay: 1,
+>>>>>>> aa2adb2e85aede48bb8567371054a82849943c5a
     opacity: 0,
     x: -20,
     ease: Expo.easeInOut,
 })
-
-let pcNavLinks = document.querySelectorAll('.pc-nav .a-nav');
-let spNav = document.querySelector('.sp-nav');
-pcNavLinks.forEach(function(link) {
-    let linkCopy = link.cloneNode(true);
-    spNav.appendChild(linkCopy);
-});
-
-document.querySelector('.open').addEventListener('click', function() {
-    this.classList.toggle('active');
-    document.querySelector('.sp-nav').classList.toggle('panelactive');
-    document.querySelector('.circle').classList.toggle('circleactive');
-});
-
-let navLinks = document.querySelectorAll('.sp-nav a');
-for (let i = 0; i < navLinks.length; i++) {
-    navLinks[i].addEventListener('click', function() {
-        document.querySelector('.open').classList.remove('active');
-        document.querySelector('.sp-nav').classList.remove('panelactive');
-        document.querySelector('.circle').classList.remove('circleactive');
-    });
-}
