@@ -13,16 +13,23 @@
 </head>
 <body>
     <div class="wrapper">
-        <div class="moon"><span class="moon-title">Svelete <br class="sp">Base</span><a class="moon-text" href="#a01">About <br class="sp">Svelete</a></div>
+        <div class="moon"><span class="moon-title">Svelte <br class="sp">Base</span><a class="moon-text" href="#a01">About <br class="sp">Svelte</a></div>
         <header>
             <div class="header-inner">
+                <div class="open" bind:this={openButton}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
                 <nav class="pc-nav">
-                    <a href="#a01">About</a>
-                    <a href="#a02">Skills</a>
+                    <a href="./#a01" class="a-nav">About</a>
+                    <a href="./#a02" class="a-nav">Skills</a>
                     <a href="./" class="a-logo">Svelte Base</a>
-                    <a href="#a03">Blog</a>
-                    <a href="#a04">Contact</a>
+                    <a href="./#a03" class="a-nav">Blog</a>
+                    <a href="./#a04" class="a-nav">Contact</a>
                 </nav>
+                <nav class="sp-nav"></nav>
+                <div class="circle"></div>
             </div>
             <div class="main-box">
                 <span class="main-read">Web</span>
